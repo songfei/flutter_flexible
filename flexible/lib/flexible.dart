@@ -1,7 +1,4 @@
 library flexible;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'screen_flexible.dart';
+export 'screen_flexible_widget.dart';
