@@ -18,14 +18,13 @@ Scales to the width of the screen. The most suitable UI can scroll up and down.
 
 ### Import 
 
-```
+```dart
 import 'package:flexible/flexible.dart';
-
 ```
 
 ### example
 
-```
+```dart
  ScreenFlexibleWidget(  // 1. Wrap with `ScreenFlexibleWidget`
   child: Builder(
     builder: (BuildContext context) {
@@ -56,5 +55,4 @@ import 'package:flexible/flexible.dart';
     },
   ),
 );
-
 ```
