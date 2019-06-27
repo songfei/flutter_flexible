@@ -36,7 +36,6 @@ double flexible(
   double maxValue,
 }) {
   double baseWidgetWidth = ScreenFlexibleInheritedWidget.of(context).baseWidgetWidth;
-  print(baseWidgetWidth);
   return ScreenFlexible.getFinalValue(
     value,
     baseWidgetWidth,

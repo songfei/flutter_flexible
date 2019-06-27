@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flexible/flexible.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -15,7 +17,8 @@ void main() {
       ),
     ));
 
-    expect(value, 375.0);
+    double width = window.physicalSize.width / window.devicePixelRatio;
+    expect(value, width);
   });
 
   testWidgets('设置宽度测试', (WidgetTester tester) async {

@@ -37,6 +37,7 @@ class ScreenFlexibleWidget<T> extends StatelessWidget {
     return ScreenFlexibleInheritedWidget(
       baseWidgetWidth: baseWidth,
       child: Stack(
+        textDirection: TextDirection.ltr,
         children: <Widget>[
           backgroundWidget ?? Container(),
           Align(
