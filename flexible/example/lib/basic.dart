@@ -1,62 +1,34 @@
-import 'dart:ui';
-
 import 'package:flexible/flexible.dart';
 import 'package:flutter/material.dart';
 
 class BasicLayoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    print(screenWidth);
-
     return ScreenFlexibleWidget(
-      calculator: (double width, double height, double ratio, dynamic platform) {
-        print(width);
-        return width * 0.8;
-      },
-      backgroundWidget: Container(
-        color: Colors.deepOrangeAccent,
-      ),
-      child: Scaffold(
-        appBar: AppBar(title: Text('基本布局')),
-        body: TestWidget(),
-      ),
-    );
-  }
-}
-
-class TestWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final width = window.physicalSize.width;
-    final height = window.physicalSize.height;
-    final ratio = window.devicePixelRatio;
-
-    return ScreenFlexibleWidget(
-      calculator: (double width, double height, double ratio, dynamic platform) {
-        print(width);
-        return width * 0.6;
-      },
-      backgroundWidget: Container(
-        color: Colors.pink,
-      ),
+      // 1. Wrap with `ScreenFlexibleWidget`
       child: Builder(
         builder: (BuildContext context) {
           return Container(
-            color: Colors.yellow,
-            width: double.infinity,
-            height: double.infinity,
-            child: Stack(
+            color: Colors.red,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
-                  width: flexible(context, 375.0 / 2),
-                  height: flexible(context, 30),
-                  color: Colors.red,
-                ),
-                Text(
-                  '$width x $height  $ratio',
-                  style: TextStyle(fontSize: flexible(context, 13.0)),
-                ),
+                  width: flexible(context, 187.5), // 2. All pixel value use `flexible` function , 375.0/2=187.5,
+                  // this container is half the width of the screen on any device.
+                  height: flexible(context, 500.0),
+                  color: Colors.yellow,
+                  child: Center(
+                    child: Text(
+                      'A',
+                      style: TextStyle(
+                        fontSize: flexible(context, 200.0), // Text fontSize also use `flexible`
+                        color: Colors.black,
+                        decoration: TextDecoration.none,
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           );
