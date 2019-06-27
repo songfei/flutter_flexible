@@ -13,9 +13,6 @@ class MenuListPage extends StatelessWidget {
       '两边留白有溢出 (Basic Layout)': () {
         print('ok');
       },
-      '适配不同平台 (Basic Layout)': () {
-        print('ok');
-      },
     };
 
     List<Widget> items = [];
