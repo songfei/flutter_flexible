@@ -3,7 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-typedef BaseWidgetWidthCalculator<T> = double Function(double width, double height, double ration, T platform);
+typedef BaseWidgetWidthCalculator<T> = double Function(
+    double width, double height, double ration, T platform);
 
 /// 确定基准 Widget的宽度， 一般是屏幕宽度， 所有使用 flexible 进行计算的时候，
 /// 都会按照 Widget树 最近的一个 TEScreenFlexibleWidget 中指定的的 `baseWidgetWidth 来等比缩放。
@@ -62,7 +63,8 @@ class ScreenFlexibleInheritedWidget extends InheritedWidget {
   }) : super(child: child);
 
   static ScreenFlexibleInheritedWidget of(BuildContext context) {
-    final ScreenFlexibleInheritedWidget screenFlexibleInheritedWidget = context.inheritFromWidgetOfExactType(ScreenFlexibleInheritedWidget);
+    final ScreenFlexibleInheritedWidget screenFlexibleInheritedWidget =
+        context.inheritFromWidgetOfExactType(ScreenFlexibleInheritedWidget);
     assert(screenFlexibleInheritedWidget != null);
     return screenFlexibleInheritedWidget;
   }

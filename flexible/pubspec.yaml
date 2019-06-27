@@ -1,11 +1,11 @@
 name: flexible
 description: Flutter UI scalable layout scheme.
-version: 0.0.1
+version: 0.1.0
 author: songfei <songfei.org@gmail.com>
 homepage: https://github.com/songfei/flutter_flexible
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=1.0.0 <3.0.0"
 
 dependencies:
   flutter:
