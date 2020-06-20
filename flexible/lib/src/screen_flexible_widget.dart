@@ -63,8 +63,8 @@ class ScreenFlexibleInheritedWidget extends InheritedWidget {
   }) : super(child: child);
 
   static ScreenFlexibleInheritedWidget of(BuildContext context) {
-    final ScreenFlexibleInheritedWidget screenFlexibleInheritedWidget =
-        context.dependOnInheritedWidgetOfExactType<ScreenFlexibleInheritedWidget>();
+    final ScreenFlexibleInheritedWidget screenFlexibleInheritedWidget = context
+        .dependOnInheritedWidgetOfExactType<ScreenFlexibleInheritedWidget>();
     assert(screenFlexibleInheritedWidget != null);
     return screenFlexibleInheritedWidget;
   }

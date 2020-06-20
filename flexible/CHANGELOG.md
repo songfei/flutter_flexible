@@ -2,6 +2,6 @@
 
 * Basic function
 
-## 0.1.1
+## 0.1.2
 
 * Modify deprecated API
