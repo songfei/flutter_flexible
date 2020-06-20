@@ -1,4 +1,4 @@
-import 'package:flexible/screen_flexible.dart';
+import 'package:flexible/flexible.dart';
 import 'package:test/test.dart';
 
 void main() {
