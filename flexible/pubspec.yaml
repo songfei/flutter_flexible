@@ -1,15 +1,12 @@
 name: flexible
-description: Flutter UI scalable layout scheme. Visual designers usually output only one screen
-  design draft when we develop mobile app, we want to be able to adapt perfectly to different
-  resolution devices. Scales to the width of the screen. The most suitable UI can scroll up and
-  down.
-version: 0.1.3
+description: Flutter UI scalable layout scheme. We want to be able to adapt perfectly to different
+  resolution devices. Scales to the width of the screen.
+version: 0.1.4
 author: songfei <songfei.org@gmail.com>
 homepage: https://github.com/songfei/flutter_flexible
 
 environment:
   sdk: ">=2.0.0 <3.0.0"
-  flutter: ">=1.12.1 <2.0.0"
 
 dependencies:
   flutter:
