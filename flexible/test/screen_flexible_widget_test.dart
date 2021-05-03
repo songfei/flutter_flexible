@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets('默认宽度测试', (WidgetTester tester) async {
-    double value;
+    double? value;
 
     await tester.pumpWidget(ScreenFlexibleWidget(
       child: Builder(
@@ -22,7 +22,7 @@ void main() {
   });
 
   testWidgets('设置宽度测试', (WidgetTester tester) async {
-    double value;
+    double? value;
 
     await tester.pumpWidget(ScreenFlexibleWidget(
       baseWidgetWidth: 750.0,
@@ -38,7 +38,7 @@ void main() {
   });
 
   testWidgets('最大值测试', (WidgetTester tester) async {
-    double value;
+    double? value;
 
     await tester.pumpWidget(ScreenFlexibleWidget(
       baseWidgetWidth: 750.0,
@@ -54,7 +54,7 @@ void main() {
   });
 
   testWidgets('最小值测试', (WidgetTester tester) async {
-    double value;
+    double? value;
 
     await tester.pumpWidget(ScreenFlexibleWidget(
       baseWidgetWidth: 750.0,
