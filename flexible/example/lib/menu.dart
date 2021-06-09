@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MenuListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Map<String, Function> menus = {
+    Map<String, void Function()> menus = {
       '基本布局 (Basic Layout)': () {
         Navigator.pushNamed(context, '/basic');
       },

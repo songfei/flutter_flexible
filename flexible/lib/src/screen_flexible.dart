@@ -13,8 +13,8 @@ class ScreenFlexible {
   static double getFinalValue(
     double value,
     double baseWidgetWidth, {
-    double minValue,
-    double maxValue,
+    double? minValue,
+    double? maxValue,
   }) {
     double result = ((value * baseWidgetWidth) / _designScreenWidth);
     if (minValue != null && result < minValue) {
@@ -32,8 +32,8 @@ class ScreenFlexible {
 double flexible(
   BuildContext context,
   double value, {
-  double minValue,
-  double maxValue,
+  double? minValue,
+  double? maxValue,
 }) {
   double baseWidgetWidth =
       ScreenFlexibleInheritedWidget.of(context).baseWidgetWidth;

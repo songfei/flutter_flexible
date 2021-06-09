@@ -11,14 +11,14 @@ typedef BaseWidgetWidthCalculator<T> = double Function(
 class ScreenFlexibleWidget<T> extends StatelessWidget {
   final Widget child;
 
-  final double baseWidgetWidth;
-  final BaseWidgetWidthCalculator<T> calculator;
-  final Widget backgroundWidget;
+  final double? baseWidgetWidth;
+  final BaseWidgetWidthCalculator<T?>? calculator;
+  final Widget? backgroundWidget;
 
-  final T platform;
+  final T? platform;
 
   ScreenFlexibleWidget({
-    @required this.child,
+    required this.child,
     this.baseWidgetWidth,
     this.calculator,
     this.backgroundWidget,
@@ -33,7 +33,7 @@ class ScreenFlexibleWidget<T> extends StatelessWidget {
 
     double baseWidth = baseWidgetWidth ?? width / ratio;
     if (calculator != null) {
-      baseWidth = calculator(width / ratio, height / ratio, ratio, platform);
+      baseWidth = calculator!(width / ratio, height / ratio, ratio, platform);
     }
     return ScreenFlexibleInheritedWidget(
       baseWidgetWidth: baseWidth,
@@ -58,13 +58,13 @@ class ScreenFlexibleInheritedWidget extends InheritedWidget {
   final double baseWidgetWidth;
 
   ScreenFlexibleInheritedWidget({
-    @required Widget child,
-    @required this.baseWidgetWidth,
+    required Widget child,
+    required this.baseWidgetWidth,
   }) : super(child: child);
 
   static ScreenFlexibleInheritedWidget of(BuildContext context) {
     final ScreenFlexibleInheritedWidget screenFlexibleInheritedWidget = context
-        .dependOnInheritedWidgetOfExactType<ScreenFlexibleInheritedWidget>();
+        .dependOnInheritedWidgetOfExactType<ScreenFlexibleInheritedWidget>()!;
     assert(screenFlexibleInheritedWidget != null);
     return screenFlexibleInheritedWidget;
   }
